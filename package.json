@@ -1,0 +1,25 @@
+{
+    "name": "jwtstuff",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/programmer-666/jwtStuff.git"
+    },
+    "author": "programmer-666",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/programmer-666/jwtStuff/issues"
+    },
+    "homepage": "https://github.com/programmer-666/jwtStuff#readme",
+    "dependencies": {
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2"
+    }
+}
