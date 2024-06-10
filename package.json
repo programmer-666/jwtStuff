@@ -19,6 +19,8 @@
     },
     "homepage": "https://github.com/programmer-666/jwtStuff#readme",
     "dependencies": {
+        "body-parser": "^1.20.2",
+        "cookie-parser": "^1.4.6",
         "express": "^4.19.2",
         "jsonwebtoken": "^9.0.2"
     }
