@@ -35,7 +35,7 @@ app.post("/login", (req, res) => {
     if (req.body.username === "klx" && req.body.password === "123") {
         if (req.cookies.token === undefined) {
             // res.cookie("token", createToken(req.body), { maxAge: 30 * 1000 });
-            res.send({ token: createToken(req.body) });
+            res.send(createToken(req.body));
         } else {
             res.status(201).send();
         }
@@ -48,4 +48,5 @@ app.get("/profile", authentication, (req, res) => {
     res.send("hi");
 });
 
-app.listen(80);
+app.listen(3000);
+
