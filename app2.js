@@ -2,15 +2,19 @@ import express from "express";
 import jsonwebtoken from "jsonwebtoken";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import morgan from "morgan";
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(morgan("combined"));
+// middlewares
 
 const createToken = (data) => {
     return jsonwebtoken.sign(data, "secret", { algorithm: "HS256", expiresIn: "15s" });
 };
+// jwt functions
 
 const authentication = (req, res, next) => {
     const authHeader = req.headers["authorization"];
@@ -20,7 +24,6 @@ const authentication = (req, res, next) => {
 
     jsonwebtoken.verify(token, "secret", (_, data) => {
         if (data !== undefined) {
-            console.log(data);
             next();
         } else {
             res.sendStatus(401);
