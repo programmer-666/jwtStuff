@@ -1,2 +1,2 @@
 # jwtStuff
-for learning jsonwebtoken
+mini app for understanding jwt
