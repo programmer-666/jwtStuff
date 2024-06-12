@@ -68,4 +68,4 @@ app.get("/profile", tokenControl, (req, res) => {
 });
 // Routes
 
-app.listen(80);
+app.listen(3000);
